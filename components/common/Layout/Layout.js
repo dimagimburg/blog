@@ -7,14 +7,17 @@ import { useTheme } from "next-themes";
 
 export function Layout({ children }) {
   return (
-    <div className="w-full min-h-screen dark:bg-gray-700 dark:text-white">
+    <div className="w-full min-h-screen dark:bg-dark-bg dark:text-dark-text">
       <div className="max-w-screen-sm px-4 py-12 mx-auto antialiased font-body">
         <Header />
+        <div className="my-8">
+          <Link href='/'>Home</Link>
+          {' | '}
+          <Link href='/about'>About</Link>
+        </div>
         <main>{children}</main>
         <footer className="text-lg font-light">
-          © {new Date().getFullYear()}, Built with{" "}
-          <a href="https://nextjs.org/">Next.js</a>
-          &#128293;
+          © {new Date().getFullYear()}, Dima Gimburg
         </footer>
       </div>
     </div>
@@ -22,7 +25,7 @@ export function Layout({ children }) {
 }
 
 const Header = () => {
-  const { theme, setTheme, systemTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const { pathname } = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -36,7 +39,6 @@ const Header = () => {
   };
 
   const isRoot = pathname === "/";
-  const isDarkMode = theme === "dark" || systemTheme === "dark";
 
   return (
     <header
@@ -50,7 +52,7 @@ const Header = () => {
       </div>
       {mounted && (
         <DarkModeSwitch
-          checked={isDarkMode}
+          checked={theme === "dark"}
           onChange={toggleDarkMode}
           className={isRoot ? 28 : 24}
         />
@@ -69,7 +71,7 @@ const LargeTitle = () => (
           "dark:text-white"
         )}
       >
-        Next.Js Starter Blog
+        Dima Gimburg
       </a>
     </Link>
   </h1>
@@ -84,7 +86,7 @@ const SmallTitle = () => (
           "dark:text-white"
         )}
       >
-        Next.Js Starter Blog
+        Dima Gimburg
       </a>
     </Link>
   </h1>

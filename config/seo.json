@@ -1,11 +1,11 @@
 {
   "siteMetadata": {
-    "title": "Next.js Starter Blog",
+    "title": "Dima Gimburg - Blog",
     "author": {
-      "name": "Jose Felix",
-      "summary": "who works building clean user interfaces with React."
+      "name": "Dima Gimburg",
+      "summary": "Hi, This is my personal/professional blog where I will share my thoughts, tips, and life in software engineering. Currently working at Via as a team lead in the Logistics and Delivery Platforms projects. "
     },
-    "description": "A blog created with Next.js and Tailwind.css",
+    "description": "My thoughts about software engineering",
     "siteUrl": "https://nextjs-starter-blog-demo.netlify.app/",
     "language": "en-US",
     "social": {

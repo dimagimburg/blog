@@ -37,6 +37,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        dark: {
+          bg: "#0D1321",
+          text: "#DFD9E2",
+          link: "#ECD444"
+        },
         "neon-orange": "#f92300",
       },
       fontSize: {
@@ -66,7 +71,7 @@ module.exports = {
 
         dark: {
           css: {
-            color: theme("colors.gray.100"),
+            color: theme("colors.dark.text"),
             blockquote: {
               borderLeftColor: theme("colors.gray.300"),
             },
@@ -77,7 +82,7 @@ module.exports = {
               backgroundColor: theme("colors.gray.300"),
             },
             a: {
-              color: theme("colors.yellow.500"),
+              color: theme("colors.dark.link"),
             },
             h1: {
               color: theme("colors.gray.100"),
