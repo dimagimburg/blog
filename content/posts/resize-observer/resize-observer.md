@@ -99,4 +99,8 @@ And of course we should provide some cleanup function to the cleanup callback of
 
 That's it. This is how and why I used ResizeObserver with my react component.
 
+##### Note:
+`ResizeObserver` is a browser API, there might be browser versions that won't support it.
+It is worth to add some error handling in case it is not supported.
+
 Cheers 🍻
