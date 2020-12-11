@@ -94,7 +94,11 @@ Cool fact - for 250ms transition it got called about 15 times, so every 16.67ms 
 and `1000ms / 16.67ms = 60 fps` so it seems that it is called 60 times a second, which makes sense as browser draw indeed works in 60hz.
 Anyway, I clear the timeout every 100ms so it won't call the `map.resize` too often,
 and I can live with it being called only 100ms after transition ended, almost not visible.
-Calling `resizeObserver.observe(mapElementRef.current);` just activates the resize observer on my wrapper element.
+Calling
+```
+resizeObserver.observe(mapElementRef.current);
+```
+just activates the resize observer on my wrapper element.
 And of course we should provide some cleanup function to the cleanup callback of the effect so when the component unmounts we don't leave foot prints.
 
 That's it. This is how and why I used ResizeObserver with my react component.
