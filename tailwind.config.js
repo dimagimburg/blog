@@ -107,6 +107,7 @@ module.exports = {
             },
             code: {
               color: theme("colors.gray.100"),
+              background: '#272b36'
             },
             figcaption: {
               color: theme("colors.gray.100"),

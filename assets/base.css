@@ -6,7 +6,3 @@ span,
 p {
   @apply font-light;
 }
-
-code {
-  background: #272b36;
-}
